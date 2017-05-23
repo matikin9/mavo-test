@@ -5,8 +5,21 @@
     <script src="https://get.mavo.io/mavo.js"></script>
   </head>
   <body>
-    <div mv-app="mavoTest">
+    <div mv-app="mavoTest" mv-storage="local">
       My first Mavo app!
+      
+      <div mv-app="commentform" mv-storage="local" mv-autosave="0">
+        <label>
+          Email:
+          <input type="email" property="email" value="foo@bar.com" />
+        </label>
+        <label>
+          Message:
+          <textarea property="message">
+            Edit the form and notice how the values persist after you refresh!
+          </textarea>
+        </label>
+      </div>
     </div>
   </body>
 </html>
